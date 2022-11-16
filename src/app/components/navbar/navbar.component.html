@@ -1,0 +1,31 @@
+<nav>
+  <ul class="navbar-custom">
+    <li style="margin-right: auto; color: azure; font-size: 2rem">
+      Smile University
+    </li>
+    <!-- Search box -->
+    <li>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </li>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/contactUs">Contact</a></li>
+    <li><a routerLink="/about">About</a></li>
+    <div class="d-flex gap-2" *ngIf="!loggedIn; else notLoggedIn">
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/register">Register</a></li>
+    </div>
+    <ng-template #notLoggedIn>
+      <div class="">
+        <li><a routerLink="#logout">Logout</a></li>
+      </div>
+    </ng-template>
+  </ul>
+</nav>

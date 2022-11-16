@@ -1,0 +1,43 @@
+<div class="container w-50">
+  <div class="card my-4 p-4 shadow bg-body">
+    <h2 class="text-center">User Login</h2>
+    <form class="" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          [(ngModel)]="model.email"
+        /><br />
+      </div>
+      <!-- Password  -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="model.password"
+          name="password"
+          placeholder="Password"
+          class="form-control"
+          required
+          #password="ngModel"
+        />
+        <div
+          *ngIf="password.invalid && (loginForm.submitted || password.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="!password.dirty">Password is required.</div>
+        </div>
+      </div>
+      <br />
+      <input
+        class="btn btn-primary"
+        type="submit"
+        value="Submit"
+        [disabled]="!loginForm.form.valid"
+      />
+    </form>
+  </div>
+</div>
