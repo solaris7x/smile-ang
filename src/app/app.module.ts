@@ -11,12 +11,14 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AdminModule } from './admin/admin.module';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeMainComponent,
+    AboutusComponent,
     FooterComponent,
     RegisterComponent,
     LoginComponent,
