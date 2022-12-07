@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     LoginComponent,
     ContactUsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AdminModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

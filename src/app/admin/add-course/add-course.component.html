@@ -1,0 +1,11 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Courses</h2>
+    <form class="" (ngSubmit)="createCourses()">
+        <div class="form-group">
+            <label for="name">Course Name</label>
+            <input [(ngModel)]="model.courseName" name="courseName" placeholder="CourseName" type="text" class="form-control" id="courseName">
+          </div><br/>
+
+          <button class="btn btn-success" (click)="createCourses()">Create</button>
+    </form>
+</div>

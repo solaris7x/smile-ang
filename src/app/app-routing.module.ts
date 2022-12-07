@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'contactUs',
     component: ContactUsComponent,
   },
+  // {
+  //   path: 'admin',
+  //   children: adminRoutes
+  // },
   // 404 Page
   {
     path: '**',
