@@ -30,7 +30,6 @@ export class RegisterComponent implements OnInit {
     return form && form.controls['name'] && form.controls['name'].value; // Dr. IQ
   }
 
-  /////////////////////////////
 
   constructor() {}
 
