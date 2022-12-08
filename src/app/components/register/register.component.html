@@ -16,9 +16,21 @@
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           Name is required
         </div>
-        <br />
       </div>
       <br />
+      <!--Gender-->
+      <div class="form-group">
+          <label>Gender</label> 
+          <p>&ensp;</p>
+          <label class="radio-inline">
+              <input type="radio" name="optradio" value='Male' [(ngModel)]="model.gender" >Male
+          </label>&nbsp;
+          <label class="radio-inline">
+              <input type="radio" name="optradio" value='Female' [(ngModel)]="model.gender" >Female
+          </label>
+      </div><br/>
+
+      <!--Email-->
       <div class="form-group">
         <label for="email">Email</label>
         <input
@@ -35,10 +47,11 @@
         Email is required
       </div>
       <br />
+      <!--date of birth-->
       <div class="form-group">
         <label for="dob">DOB</label>
         <input
-          type="text"
+          type="date"
           class="form-control"
           id="dob"
           [(ngModel)]="model.dob"
@@ -94,7 +107,7 @@
             Password & Confirm Password does not match.
           </div>
         </div>
-      </div>
+      </div><br/>
       <button class="btn btn-primary" [disabled]="!regisForm.form.valid">
         Submit
       </button>

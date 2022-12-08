@@ -2,6 +2,7 @@ export interface UserType {
   id: string;
   name: string;
   email: string;
+  gender:string;
   password: string;
   dob?: string;
 }
@@ -18,8 +19,9 @@ export interface Faculty extends UserType {
 
 export class User {
   constructor(
-    public id: string,
+    /* public id:Number, */
     public name: string,
+    public gender:string,
     public email: string,
     public password: string,
     public cpassword: string,

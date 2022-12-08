@@ -3,7 +3,7 @@
     <h2 class="text-center">User Login</h2>
     <form class="" (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email">Email</label>
         <input
           type="text"
           class="form-control"
@@ -32,6 +32,21 @@
         </div>
       </div>
       <br />
+      <!--Role-->
+      <div class="form-group">
+        <label>Role</label> 
+        <p>&ensp;</p>
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='Admin' [(ngModel)]="model.role" > Admin
+        </label>&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='Staff' [(ngModel)]="model.role" > Staff
+        </label>&nbsp;
+        <label class="radio-inline">
+          <input type="radio" name="optradio" value='Student' [(ngModel)]="model.role" > Student
+       </label>
+    </div><br/>
+
       <input
         class="btn btn-primary"
         type="submit"

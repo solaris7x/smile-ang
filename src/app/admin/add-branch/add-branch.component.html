@@ -1,0 +1,11 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Branches</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Branch Name</label>
+            <input placeholder="BranchName" [(ngModel)]="model.branchName" name="branchName" type="text" class="form-control" id="branchName">
+        </div><br/>
+
+          <button class="btn btn-success" (click)="createBranches()">Create</button>
+    </form>
+</div>

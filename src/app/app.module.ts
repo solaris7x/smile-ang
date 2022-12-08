@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AdminModule } from './admin/admin.module';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { StudentModule } from './student/student.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     LoginComponent,
     ContactUsComponent,
   ],
-  imports: [BrowserModule, FormsModule, AdminModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AdminModule,StudentModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,86 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add faculty</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">FirstName:</label>
+        <input [(ngModel)]="model.firstName" placeholder="FirstName" type="text" name="firstName" class="form-control" id="firstName">
+      </div>
+      <br/>
+       <div class="form-group">
+        <label for="lastname">LastName:</label>
+        <input [(ngModel)]="model.lastName" placeholder="LastName" type="text" name="lastName" class="form-control" id="lastName">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input [(ngModel)]="model.id" placeholder="ID" name="id" type="number" class="form-control" id="id">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input [(ngModel)]="model.gender" placeholder="Gender" type="radio" name="gender" class="form-control" id="gender">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="dob">DOB:</label>
+        <input [(ngModel)]="model.dob" placeholder="DOB" type="date" name="dob" class="form-control" id="dob">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="phno">Ph.No:</label>
+        <input [(ngModel)]="model.phno" placeholder="Ph.No" type="text" name="phno" class="form-control" id="ph.No">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="Email">Email:</label>
+        <input [(ngModel)]="model.email" placeholder="Email" type="text" name="email" class="form-control" id="email">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="experiance">Experiance:</label>
+        <input [(ngModel)]="model.experiance" placeholder="Experiance" type="number" name="experiance" class="form-control" id="experiance">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="qualification">Qualification:</label>
+        <input [(ngModel)]="model.qualification" placeholder="Qualification" type="text" name="qualification" class="form-control" id="qualification">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="designation">Designation:</label>
+        <input [(ngModel)]="model.designation" placeholder="Designation" type="text" name="designation" class="form-control" id="designation">
+      </div>
+      <br/>
+      <!--course=(B.tech,M.Tech..) and branch=(ece,cse,it...) -->
+      <div class="from-group">
+        <label>Courses</label>
+        <select class="form-control" name="course" ng-model="model.course">
+            <option value="">--Select--</option>
+            <!-- <option *ngFor="let course of courseList" value="{{course}}">{{model.course}}</option> -->
+            <option value="1">B.Tech</option>
+            <option value="2">M.Tech</option>
+            <option value="3">MCA</option>
+            <option value="4">MBA</option>
+        </select>
+      </div>
+      <br/>
+      <div class="from-group">
+        <label>Branches</label>
+        <select class="form-control" name="branch" ng-model="model.branch">
+            <option value="">--Select--</option>
+            <option value="1">Artificial Intelligence</option>
+            <option value="2">CIVIL</option>
+            <option value="3">CSE</option>
+            <option value="4">Cyber Forensics</option>
+            <option value="5">Data Science</option>
+            <option value="6">ECE</option>
+            <option value="7">EEE</option>
+            <option value="8">IT</option>
+            <option value="9">Information Security</option>
+            <option value="10">MECH</option>
+            <option value="11">Machine Learning</option>
+        </select>
+    </div>
+      <button class="btn btn-success" (click)="createFaculty()">Create</button>
+    </form>
+    </div>

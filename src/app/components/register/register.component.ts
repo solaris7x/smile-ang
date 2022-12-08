@@ -7,7 +7,7 @@ import { Student, User } from 'src/app/models/user';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  model = new User('', '', '', '', '');
+  model = new User('', '','', '', '', '');
   // model = new Student('', '', '', '', '', '', ['Computer Science']);
 
   submitted = false;
@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
   resetFormModel() {
-    this.model = new User('', '', '', '', '');
+    this.model = new User('', '','', '', '', '');
     // this.model = new Student('', '', '', '', '', '', ['Computer Science']);
   }
 
