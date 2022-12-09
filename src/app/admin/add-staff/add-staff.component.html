@@ -17,10 +17,15 @@
       </div>
       <br/>
       <div class="form-group">
-        <label for="gender">Gender:</label>
-        <input [(ngModel)]="model.gender" placeholder="Gender" type="radio" name="gender" class="form-control" id="gender">
-      </div>
-      <br/>
+        <label>Gender:</label> 
+        <p>&ensp;</p>
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='Male' [(ngModel)]="model.gender" >Male
+        </label>&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='Female' [(ngModel)]="model.gender" >Female
+        </label>
+      </div><br/>
       <div class="form-group">
         <label for="dob">DOB:</label>
         <input [(ngModel)]="model.dob" placeholder="DOB" type="date" name="dob" class="form-control" id="dob">
@@ -80,7 +85,7 @@
             <option value="10">MECH</option>
             <option value="11">Machine Learning</option>
         </select>
-    </div>
+    </div><br/>
       <button class="btn btn-success" (click)="createFaculty()">Create</button>
     </form>
     </div>

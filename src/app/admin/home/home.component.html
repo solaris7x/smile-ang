@@ -1,9 +1,19 @@
-<p>Welcome to Home Component.</p><hr/><br/>
-<p>from here we need to link all components inside admin module.</p>
-<!-- <ul>
-    <li><a routerLink='add-branch'>Add Branch</a></li>
-    <li><a *ngIf="condition" class="make_it_look_like_a_button" [routerLink]="['add-branch']">Add Branch
-    </a>
-    <button *ngIf="!condition">Test</button>
-    </li>
-</ul> -->
+<p>Welcome to Home Component.</p><hr/><br>
+<p>from here we can go to all components.</p>
+
+<!-- <div class="column">
+    <div class="card">
+       <img src="assets\dental.jpg" alt="Avatar" >
+        <hr>
+        <div class="button1">
+          <input type="submit" routerLink="/add-staff" value="Add New Faculty" name="child">
+        </div>
+    </div>
+</div> -->
+
+<div class="button1">
+    <input type="submit" routerLink="/add-staff" value="Add New Faculty" name="child"> &nbsp;
+    <input type="submit" routerLink="/add-student" value="Add New Student" name="child">&nbsp;
+    <input type="submit" routerLink="/add-course" value="Add New Course" name="child">&nbsp;
+    <input type="submit" routerLink="/add-branch" value="Add New Branch" name="child">
+</div>
