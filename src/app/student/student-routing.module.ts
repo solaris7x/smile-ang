@@ -7,16 +7,16 @@ import { TimetableComponent } from './timetable/timetable.component';
  
 export const studentRoutes: Routes = [
   {
+    path: "student",
+    component: ProfileComponent
+  },
+  {
     path: "feedback",
     component: FeedbackComponent
   },
   {
     path: "fees",
     component: FeesComponent
-  },
-  {
-    path: "profile",
-    component: ProfileComponent
   },
   {
     path: "timetable",
