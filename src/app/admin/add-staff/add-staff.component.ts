@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Faculty, User } from 'src/app/models/user';
+import { HttpClientService } from '../http-client.service';
 
 @Component({
   selector: 'app-add-staff',
@@ -7,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddStaffComponent implements OnInit {
 
-  /* courseList: any = ['B.Tech', 'M.Tech', 'MBA', 'MCA']
- */
-  constructor() { }
+  department: any = [{id:null,name:'--Select--'},{id:'btech',name:'B.Tech'},{id:'mtech',name:'M.Tech'},
+  {id:'mba',name:'MBA'},{id:'mca',name:'MCA'}]
 
-  model={
+model = new Faculty("","","","","","","","","","","")
+
+ /* model={
     firstName:'',
     lastName:'',
     id:'',
@@ -22,14 +25,19 @@ export class AddStaffComponent implements OnInit {
     experiance:'',
     qualification:'',
     designation:'',
-    course:'',
-    branch:''
-  }
+    department:''
+  } */
+
+
+  constructor(private httpClService:HttpClientService) { }
 
   ngOnInit(): void {
   }
 
-  createFaculty(){
-    console.log(this.model)
+  createFaculty():void{
+    this.httpClService.createFaculty(this.model).subscribe(data=>{
+      alert("staff added successfully.")
+      console.log(data)
+    })
   }
 }

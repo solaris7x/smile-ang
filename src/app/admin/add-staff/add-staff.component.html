@@ -59,33 +59,14 @@
       <!--course=(B.tech,M.Tech..) and branch=(ece,cse,it...) -->
       <div class="from-group">
         <label>Courses</label>
-        <select class="form-control" name="course" ng-model="model.course">
-            <option value="">--Select--</option>
-            <!-- <option *ngFor="let course of courseList" value="{{course}}">{{model.course}}</option> -->
-            <option value="1">B.Tech</option>
+        <select class="form-control" name="department" [(ngModel)]="model.department">
+            <option *ngFor="let dept of department" [value]="model.department">{{dept.name}}</option>
+            <!-- <option value="1">B.Tech</option>
             <option value="2">M.Tech</option>
-            <option value="3">MCA</option>
-            <option value="4">MBA</option>
+            <option value="3">MBA</option>
+            <option value="4">MCA</option> -->
         </select>
       </div>
-      <br/>
-      <div class="from-group">
-        <label>Branches</label>
-        <select class="form-control" name="branch" ng-model="model.branch">
-            <option value="">--Select--</option>
-            <option value="1">Artificial Intelligence</option>
-            <option value="2">CIVIL</option>
-            <option value="3">CSE</option>
-            <option value="4">Cyber Forensics</option>
-            <option value="5">Data Science</option>
-            <option value="6">ECE</option>
-            <option value="7">EEE</option>
-            <option value="8">IT</option>
-            <option value="9">Information Security</option>
-            <option value="10">MECH</option>
-            <option value="11">Machine Learning</option>
-        </select>
-    </div><br/>
       <button class="btn btn-success" (click)="createFaculty()">Create</button>
     </form>
     </div>

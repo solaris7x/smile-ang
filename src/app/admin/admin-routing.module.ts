@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddBranchComponent } from './add-branch/add-branch.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { AddStaffComponent } from './add-staff/add-staff.component';
-import { AddStudentComponent } from './add-student/add-student.component';
 import { HomeComponent } from './home/home.component';
 
 export const adminRoutes: Routes = [
@@ -27,10 +26,6 @@ export const adminRoutes: Routes = [
   {
     path:'add-staff',
     component:AddStaffComponent
-  },
-  {
-    path:'add-student',
-    component:AddStudentComponent
   }
 ];
 
