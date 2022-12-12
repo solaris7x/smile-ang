@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { StudentRoutingModule } from './student-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { TimetableComponent } from './timetable/timetable.component';
-import { FeesComponent } from './fees/fees.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
 
@@ -12,7 +11,6 @@ import { FeedbackComponent } from './feedback/feedback.component';
   declarations: [
     ProfileComponent,
     TimetableComponent,
-    FeesComponent,
     FeedbackComponent
   ],
   imports: [

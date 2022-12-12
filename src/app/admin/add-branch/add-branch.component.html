@@ -1,12 +1,15 @@
-<div class="col-md-6">
-    <h2 class="text-center">Add Branches</h2>
-    <form>
-        <div class="form-group">
-            <label for="name">Branch Name</label>
-            <input placeholder="BranchName" [(ngModel)]="model.branchName" name="branchName"
-             type="text" class="form-control" id="branchName">
-        </div><br/>
+<div class="container w-50">
+    <div class="card my-4 p-4 shadow bg-body">
+        <h4 class="text-center">Add Branches</h4>
+        <form>
+            <div class="form-group">
+                <label for="name">Branch Name</label>
+                <input placeholder="BranchName" [(ngModel)]="model.branchName" name="branchName"
+                type="text" class="form-control" id="branchName">
+            </div><br/>
 
-          <button class="btn btn-success" (click)="createBranches()">Create</button>
-    </form>
+            <button class="btn btn-success" (click)="createBranches()">Create</button>&nbsp;
+            <button class="btn btn-warning" routerLink="/admin">Back</button>
+        </form>
+    </div>
 </div>

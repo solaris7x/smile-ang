@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { HttpClientService , Branch} from '../http-client.service';
+import { Branch, HttpClientService} from '../http-client.service';
 @Component({
   selector: 'app-add-branch',
   templateUrl: './add-branch.component.html',
@@ -11,6 +11,7 @@ export class AddBranchComponent implements OnInit {
   constructor(private httpClService:HttpClientService) { }
 
   model=new Branch("");
+  
   ngOnInit(): void {
   }
   
@@ -19,5 +20,6 @@ export class AddBranchComponent implements OnInit {
       alert("branch added successfully.")
       console.log(data)
     })
+    console.log(this.model)
   }
 }

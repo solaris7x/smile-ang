@@ -1,8 +1,47 @@
-<p>Welcome to Home Component.</p><hr/><br>
-<p>from here we can go to all components.</p>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#2d2a2a;">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+  
+      <!-- Navbar brand -->
+      <a class="navbar-brand" routerLink="">Admin</a>
+  
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+            <!-- Link -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/add-staff" name="child1">Add New Faculty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/add-course" name="child2">Add New Course</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/add-branch" name="child3">Add New Branch</a>
+            </li>
+            </ul>
+        </div>
 
-<div class="button1">
-    <input type="submit" routerLink="/add-staff" value="Add New Faculty" name="child"> &nbsp;
-    <input type="submit" routerLink="/add-course" value="Add New Course" name="child">&nbsp;
-    <input type="submit" routerLink="/add-branch" value="Add New Branch" name="child">
-</div>
+        <div class="d-flex align-items-center">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/logout" name="logout">Log out</a>
+                </li>
+            </ul>   
+        </div>
+    </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="student">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link" routerLink="/students" routerLinkActive="active">Added Students</a>
+        <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
+    </div>
+</nav> -->

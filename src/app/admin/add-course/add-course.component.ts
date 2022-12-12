@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Course, HttpClientService } from 'src/app/admin/http-client.service';
 @Component({
   selector: 'app-add-course',
   templateUrl: './add-course.component.html',
@@ -7,18 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCourseComponent implements OnInit {
 
-  constructor() {
+  constructor(private httpClient:HttpClientService) {
    }
 
   ngOnInit(): void {
   }
 
-  model = {
-    courseName:''
-  };
+  model = new Course("");
 
   createCourses(){
+    this.httpClient.createCourses(this.model).subscribe(data =>
+      {
+        console.log("Course added successfully")
+        console.log(data)
+      })
     console.log(this.model)
   }
-
 }

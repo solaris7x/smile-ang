@@ -1,72 +1,84 @@
-<div class="col-md-6">
+<div class="container w-50">
+  <div class="card my-4 p-4 shadow bg-body">
     <h2 class="text-center">Add faculty</h2>
     <form>
-      <div class="form-group">
-        <label for="name">FirstName:</label>
-        <input [(ngModel)]="model.firstName" placeholder="FirstName" type="text" name="firstName" class="form-control" id="firstName">
-      </div>
-      <br/>
-       <div class="form-group">
-        <label for="lastname">LastName:</label>
-        <input [(ngModel)]="model.lastName" placeholder="LastName" type="text" name="lastName" class="form-control" id="lastName">
-      </div>
-      <br/>
       <div class="form-group">
         <label for="id">ID:</label>
         <input [(ngModel)]="model.id" placeholder="ID" name="id" type="number" class="form-control" id="id">
       </div>
-      <br/>
+      <br />
       <div class="form-group">
-        <label>Gender:</label> 
+        <label for="name">FirstName:</label>
+        <input [(ngModel)]="model.firstName" placeholder="FirstName" type="text" name="firstName" class="form-control"
+          id="firstName">
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="lastname">LastName:</label>
+        <input [(ngModel)]="model.lastName" placeholder="LastName" type="text" name="lastName" class="form-control"
+          id="lastName">
+      </div>
+      <br />
+      <div class="form-group">
+        <label>Gender:</label>
         <p>&ensp;</p>
         <label class="radio-inline">
-            <input type="radio" name="optradio" value='Male' [(ngModel)]="model.gender" >Male
+          <input type="radio" name="optradio" value='Male' [(ngModel)]="model.gender"> Male
         </label>&nbsp;
         <label class="radio-inline">
-            <input type="radio" name="optradio" value='Female' [(ngModel)]="model.gender" >Female
+          <input type="radio" name="optradio" value='Female' [(ngModel)]="model.gender"> Female
+        </label>&nbsp;
+        <label class="radio-inline">
+          <input type="radio" name="optradio" value='Other' [(ngModel)]="model.gender"> Other
         </label>
-      </div><br/>
+      </div><br />
       <div class="form-group">
         <label for="dob">DOB:</label>
         <input [(ngModel)]="model.dob" placeholder="DOB" type="date" name="dob" class="form-control" id="dob">
       </div>
-      <br/>
+      <br />
       <div class="form-group">
         <label for="phno">Ph.No:</label>
         <input [(ngModel)]="model.phno" placeholder="Ph.No" type="text" name="phno" class="form-control" id="ph.No">
       </div>
-      <br/>
+      <br />
       <div class="form-group">
         <label for="Email">Email:</label>
         <input [(ngModel)]="model.email" placeholder="Email" type="text" name="email" class="form-control" id="email">
       </div>
-      <br/>
+      <br />
+      <div class="form-group">
+        <label for="id">Password:</label>
+        <input [(ngModel)]="model.password" placeholder="password" name="password" type="password" class="form-control" id="password">
+      </div>
+      <br />
       <div class="form-group">
         <label for="experiance">Experiance:</label>
-        <input [(ngModel)]="model.experiance" placeholder="Experiance" type="number" name="experiance" class="form-control" id="experiance">
+        <input [(ngModel)]="model.experiance" placeholder="Experiance" type="number" name="experiance"
+          class="form-control" id="experiance">
       </div>
-      <br/>
+      <br />
       <div class="form-group">
         <label for="qualification">Qualification:</label>
-        <input [(ngModel)]="model.qualification" placeholder="Qualification" type="text" name="qualification" class="form-control" id="qualification">
+        <input [(ngModel)]="model.qualification" placeholder="Qualification" type="text" name="qualification"
+          class="form-control" id="qualification">
       </div>
-      <br/>
+      <br />
       <div class="form-group">
         <label for="designation">Designation:</label>
-        <input [(ngModel)]="model.designation" placeholder="Designation" type="text" name="designation" class="form-control" id="designation">
+        <input [(ngModel)]="model.designation" placeholder="Designation" type="text" name="designation"
+          class="form-control" id="designation">
       </div>
-      <br/>
+      <br />
       <!--course=(B.tech,M.Tech..) and branch=(ece,cse,it...) -->
       <div class="from-group">
-        <label>Courses</label>
+        <label>Course:</label>
         <select class="form-control" name="department" [(ngModel)]="model.department">
-            <option *ngFor="let dept of department" [value]="model.department">{{dept.name}}</option>
-            <!-- <option value="1">B.Tech</option>
-            <option value="2">M.Tech</option>
-            <option value="3">MBA</option>
-            <option value="4">MCA</option> -->
+          <option *ngFor="let dept of department" [value]="model.department">{{dept.name}}</option>
         </select>
-      </div>
-      <button class="btn btn-success" (click)="createFaculty()">Create</button>
+      </div><br/>
+      <button class="btn btn-success" (click)="createFaculty()">Create</button>&nbsp;
+      <button class="btn btn-warning" routerLink="/admin">Back</button>
     </form>
-    </div>
+  </div>
+</div>

@@ -1,11 +1,14 @@
-<div class="col-md-6">
-    <h2 class="text-center">Add Courses</h2>
-    <form class="" (ngSubmit)="createCourses()">
-        <div class="form-group">
-            <label for="name">Course Name</label>
-            <input [(ngModel)]="model.courseName" name="courseName" placeholder="CourseName" type="text" class="form-control" id="courseName">
-          </div><br/>
-          
-          <button class="btn btn-success" (click)="createCourses()">Create</button>
-    </form>
+<div class="container w-50">
+    <div class="card my-4 p-4 shadow bg-body">
+            <h4 class="text-center">Add Courses</h4>
+            <form class="" (ngSubmit)="createCourses()">
+                <div class="form-group">
+                    <label for="name">Course Name</label>
+                    <input [(ngModel)]="model.courseName" name="courseName" placeholder="CourseName" type="text" class="form-control" id="courseName">
+                </div><br/>
+                
+                <button class="btn btn-success" (click)="createCourses()">Create</button>&nbsp;
+                <button class="btn btn-warning" routerLink="/admin">Back</button>
+            </form>
+    </div>
 </div>

@@ -13,6 +13,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { AdminModule } from './admin/admin.module';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { StudentModule } from './student/student.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { StudentModule } from './student/student.module';
     LoginComponent,
     ContactUsComponent,
   ],
-  imports: [BrowserModule, FormsModule, AdminModule,StudentModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule,HttpClientModule, AdminModule,StudentModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
