@@ -1,0 +1,37 @@
+<div class="container w-50">
+  <div class="card my-4 p-4 shadow bg-body">
+    <h4 class="text-center">Add Department</h4>
+    <form>
+      <div class="form-group">
+        <!-- Department Name -->
+        <label for="name">Department Name</label>
+        <input
+          placeholder="Department Name"
+          [(ngModel)]="model.name"
+          name="departmentName"
+          type="text"
+          class="form-control"
+          id="departmentName"
+        />
+      </div>
+      <!-- Department Code -->
+      <div class="form-group">
+        <label for="code">Department Code</label>
+        <input
+          placeholder="Department Code"
+          [(ngModel)]="model.code"
+          name="departmentCode"
+          type="text"
+          class="form-control"
+          id="departmentCode"
+        />
+      </div>
+      <br />
+
+      <button class="btn btn-success" (click)="createDepartment()">
+        Create</button
+      >&nbsp;
+      <button class="btn btn-warning" routerLink="/admin">Back</button>
+    </form>
+  </div>
+</div>
