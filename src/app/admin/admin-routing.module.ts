@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { AddBranchComponent } from './add-branch/add-branch.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { AddDepartmentComponent } from './add-department/add-department.component';
 import { AddStaffComponent } from './add-staff/add-staff.component';
 import { HomeComponent } from './home/home.component';
+import { ViewDepartmentComponent } from './view-department/view-department.component';
 
 export const adminRoutes: Routes = [
   /* {
@@ -23,6 +23,10 @@ export const adminRoutes: Routes = [
   {
     path: 'add-department',
     component: AddDepartmentComponent,
+  },
+  {
+    path: 'view-department',
+    component: ViewDepartmentComponent,
   },
   {
     path: 'add-staff',

@@ -9,6 +9,7 @@ import { AddStaffComponent } from './add-staff/add-staff.component';
 import { HomeComponent } from './home/home.component';
 import { AddDepartmentComponent } from './add-department/add-department.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewDepartmentComponent } from './view-department/view-department.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddStaffComponent,
     HomeComponent,
     AddDepartmentComponent,
+    ViewDepartmentComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, HttpClientModule, FormsModule],
 })

@@ -14,4 +14,8 @@ export class DepartmentService {
     console.log('addDepartment', department);
     return this.http.post(this.baseUrl, department);
   }
+
+  getDepartments() {
+    return this.http.get(this.baseUrl);
+  }
 }

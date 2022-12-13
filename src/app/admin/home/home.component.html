@@ -1,41 +1,64 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#2d2a2a;">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-  
-      <!-- Navbar brand -->
-      <a class="navbar-brand" routerLink="">Admin</a>
-  
-      <!-- Toggle button -->
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-  
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    
-            <!-- Link -->
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/add-staff" name="child1">Add New Faculty</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/add-course" name="child2">Add New Course</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/add-branch" name="child3">Add New Branch</a>
-            </li>
-            </ul>
-        </div>
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #2d2a2a"
+>
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" routerLink="">Admin</a>
 
-        <div class="d-flex align-items-center">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/logout" name="logout">Log out</a>
-                </li>
-            </ul>   
-        </div>
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Link -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add-staff" name="child1"
+            >Add New Faculty</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add-course" name="child2"
+            >Add New Course</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add-department" name="add-department"
+            >Add New Department</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/view-department"
+            name="view-department"
+            >View Departments</a
+          >
+        </li>
+      </ul>
     </div>
+
+    <div class="d-flex align-items-center">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/logout" name="logout">Log out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- <nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="student">
