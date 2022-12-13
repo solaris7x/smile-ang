@@ -6,10 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { AddBranchComponent } from './add-branch/add-branch.component';
 import { AddStaffComponent } from './add-staff/add-staff.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ViewStaffComponent } from './view-staff/view-staff.component';
 import { ViewCourseComponent } from './view-course/view-course.component';
 
+import { AddDepartmentComponent } from './add-department/add-department.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewDepartmentComponent } from './view-department/view-department.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,10 @@ import { ViewCourseComponent } from './view-course/view-course.component';
     AddStaffComponent,
     HomeComponent,
     ViewStaffComponent,
-    ViewCourseComponent
+    ViewCourseComponent,
+    AddDepartmentComponent,
+    ViewDepartmentComponent,
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ]
+  imports: [CommonModule, AdminRoutingModule, FormsModule, HttpClientModule],
 })
-export class AdminModule { }
+export class AdminModule {}
