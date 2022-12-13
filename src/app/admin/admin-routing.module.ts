@@ -6,6 +6,7 @@ import { AddBranchComponent } from './add-branch/add-branch.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { AddStaffComponent } from './add-staff/add-staff.component';
 import { HomeComponent } from './home/home.component';
+import { ViewCourseComponent } from './view-course/view-course.component';
 
 export const adminRoutes: Routes = [
   /* {
@@ -19,6 +20,10 @@ export const adminRoutes: Routes = [
   {
     path:'add-course',
     component:AddCourseComponent
+  },
+  {
+    path:'view-course',
+    component:ViewCourseComponent
   },
   {
     path:'add-branch',
