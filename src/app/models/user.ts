@@ -49,7 +49,7 @@ export class Faculty implements Faculty {
     public lastName:string,
     public gender:string,
     public email: string,
-    public phno:string,
+    public phone:string,
     public experiance:string,
     public qualification:string,
     public designation:string,
