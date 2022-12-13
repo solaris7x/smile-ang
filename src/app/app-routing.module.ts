@@ -20,8 +20,8 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path:'aboutus',
-    component:AboutusComponent,
+    path: 'aboutus',
+    component: AboutusComponent,
   },
   // Login Page
   {
@@ -33,14 +33,14 @@ const routes: Routes = [
     path: 'contactUs',
     component: ContactUsComponent,
   },
-{
-  path: 'admin',
-  children: [...adminRoutes]
- },
- {
-   path:'student',
-   children:[...studentRoutes]
- },
+  // {
+  //   path: 'admin',
+  //   children: [...adminRoutes]
+  //  },
+  {
+    path: 'student',
+    children: [...studentRoutes],
+  },
   // 404 Page
   {
     path: '**',

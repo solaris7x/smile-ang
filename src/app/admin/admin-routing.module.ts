@@ -11,41 +11,39 @@ import { ViewDepartmentComponent } from './components/view-department/view-depar
 import { ViewStaffComponent } from './components/view-staff/view-staff.component';
 
 export const adminRoutes: Routes = [
-  /* {
-    path:'',
-    component:
-  }, */
   {
     path: 'admin',
     component: HomeComponent,
-  },
-  {
-    path: 'add-course',
-    component: AddCourseComponent,
-  },
-  {
-    path: 'view-course',
-    component: ViewCourseComponent,
-  },
-  {
-    path: 'view-staff',
-    component: ViewStaffComponent,
-  },
-  {
-    path: 'add-staff',
-    component: AddStaffComponent,
-  },
-  {
-    path: 'add-department',
-    component: AddDepartmentComponent,
-  },
-  {
-    path: 'view-department',
-    component: ViewDepartmentComponent,
-  },
-  {
-    path: 'add-staff',
-    component: AddStaffComponent,
+    children: [
+      {
+        path: 'add-course',
+        component: AddCourseComponent,
+      },
+      {
+        path: 'view-course',
+        component: ViewCourseComponent,
+      },
+      {
+        path: 'view-staff',
+        component: ViewStaffComponent,
+      },
+      {
+        path: 'add-staff',
+        component: AddStaffComponent,
+      },
+      {
+        path: 'add-department',
+        component: AddDepartmentComponent,
+      },
+      {
+        path: 'view-department',
+        component: ViewDepartmentComponent,
+      },
+      {
+        path: 'add-staff',
+        component: AddStaffComponent,
+      },
+    ],
   },
 ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Staff } from '../../models/Staff';
 import { HttpClientService } from '../../services/http-client.service';
+import { StaffService } from '../../services/staff.service';
 
 @Component({
   selector: 'app-add-staff',
@@ -18,12 +19,12 @@ export class AddStaffComponent implements OnInit {
 
   model = new Staff('', '', '', '', '', '', '', '', '', '', '');
 
-  constructor(private httpClService: HttpClientService) {}
+  constructor(private staffService: StaffService) {}
 
   ngOnInit(): void {}
 
-  createFaculty(): void {
-    this.httpClService.createStaff(this.model).subscribe((data) => {
+  createStaff(): void {
+    this.staffService.addStaff(this.model).subscribe((data) => {
       alert('staff added successfully.');
       console.log(data);
     });

@@ -14,4 +14,8 @@ export class CourseService {
     console.log('addCourse', course);
     return this.http.post(this.baseUrl, course);
   }
+
+  getCourse() {
+    return this.http.get<CourseType[]>(this.baseUrl);
+  }
 }

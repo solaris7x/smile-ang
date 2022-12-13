@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseType } from '../../models/course';
-import { HttpClientService } from '../../services/http-client.service';
+import { CourseService } from '../../services/course.service';
 
 @Component({
   selector: 'app-view-course',
@@ -9,10 +9,10 @@ import { HttpClientService } from '../../services/http-client.service';
 })
 export class ViewCourseComponent implements OnInit {
   course: CourseType[] = [];
-  constructor(private httpService: HttpClientService) {}
+  constructor(private courseService: CourseService) {}
 
   ngOnInit(): void {
-    this.httpService.getCourse().subscribe((data) => {
+    this.courseService.getCourse().subscribe((data) => {
       this.course = data;
     });
   }

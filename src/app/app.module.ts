@@ -26,7 +26,14 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ContactUsComponent,
   ],
-  imports: [BrowserModule, FormsModule,HttpClientModule, AdminModule,StudentModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AdminModule,
+    StudentModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

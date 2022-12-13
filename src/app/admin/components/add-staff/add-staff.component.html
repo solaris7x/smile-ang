@@ -4,75 +4,160 @@
     <form>
       <div class="form-group">
         <label for="name">FirstName:</label>
-        <input [(ngModel)]="model.firstName" placeholder="FirstName" type="text" name="firstName" class="form-control"
-          id="firstName">
+        <input
+          [(ngModel)]="model.firstName"
+          placeholder="FirstName"
+          type="text"
+          name="firstName"
+          class="form-control"
+          id="firstName"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="lastname">LastName:</label>
-        <input [(ngModel)]="model.lastName" placeholder="LastName" type="text" name="lastName" class="form-control"
-          id="lastName">
+        <input
+          [(ngModel)]="model.lastName"
+          placeholder="LastName"
+          type="text"
+          name="lastName"
+          class="form-control"
+          id="lastName"
+        />
       </div>
       <br />
       <div class="form-group">
         <label>Gender:</label>
         <p>&ensp;</p>
         <label class="radio-inline">
-          <input type="radio" name="optradio" value='Male' [(ngModel)]="model.gender"> Male
-        </label>&nbsp;
+          <input
+            type="radio"
+            name="optradio"
+            value="Male"
+            [(ngModel)]="model.gender"
+          />
+          Male </label
+        >&nbsp;
         <label class="radio-inline">
-          <input type="radio" name="optradio" value='Female' [(ngModel)]="model.gender"> Female
-        </label>&nbsp;
+          <input
+            type="radio"
+            name="optradio"
+            value="Female"
+            [(ngModel)]="model.gender"
+          />
+          Female </label
+        >&nbsp;
         <label class="radio-inline">
-          <input type="radio" name="optradio" value='Other' [(ngModel)]="model.gender"> Other
+          <input
+            type="radio"
+            name="optradio"
+            value="Other"
+            [(ngModel)]="model.gender"
+          />
+          Other
         </label>
-      </div><br />
+      </div>
+      <br />
       <div class="form-group">
         <label for="dob">DOB:</label>
-        <input [(ngModel)]="model.dob" placeholder="DOB" type="date" name="dob" class="form-control" id="dob">
+        <input
+          [(ngModel)]="model.dob"
+          placeholder="DOB"
+          type="date"
+          name="dob"
+          class="form-control"
+          id="dob"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="phone">Ph.No:</label>
-        <input [(ngModel)]="model.phone" placeholder="Ph.No" type="text" name="phone" class="form-control" id="phone">
+        <input
+          [(ngModel)]="model.phone"
+          placeholder="Ph.No"
+          type="text"
+          name="phone"
+          class="form-control"
+          id="phone"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="Email">Email:</label>
-        <input [(ngModel)]="model.email" placeholder="Email" type="text" name="email" class="form-control" id="email">
+        <input
+          [(ngModel)]="model.email"
+          placeholder="Email"
+          type="text"
+          name="email"
+          class="form-control"
+          id="email"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="id">Password:</label>
-        <input [(ngModel)]="model.password" placeholder="password" name="password" type="password" class="form-control" id="password">
+        <input
+          [(ngModel)]="model.password"
+          placeholder="password"
+          name="password"
+          type="password"
+          class="form-control"
+          id="password"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="experiance">Experiance:</label>
-        <input [(ngModel)]="model.experiance" placeholder="Experiance" type="number" name="experiance"
-          class="form-control" id="experiance">
+        <input
+          [(ngModel)]="model.experiance"
+          placeholder="Experiance"
+          type="number"
+          name="experiance"
+          class="form-control"
+          id="experiance"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="qualification">Qualification:</label>
-        <input [(ngModel)]="model.qualification" placeholder="Qualification" type="text" name="qualification"
-          class="form-control" id="qualification">
+        <input
+          [(ngModel)]="model.qualification"
+          placeholder="Qualification"
+          type="text"
+          name="qualification"
+          class="form-control"
+          id="qualification"
+        />
       </div>
       <br />
       <div class="form-group">
         <label for="designation">Designation:</label>
-        <input [(ngModel)]="model.designation" placeholder="Designation" type="text" name="designation"
-          class="form-control" id="designation">
+        <input
+          [(ngModel)]="model.designation"
+          placeholder="Designation"
+          type="text"
+          name="designation"
+          class="form-control"
+          id="designation"
+        />
       </div>
       <br />
       <!--course=(B.tech,M.Tech..) and branch=(ece,cse,it...) -->
       <div class="from-group">
         <label>Department:</label>
-        <select class="form-control" name="department" [(ngModel)]="model.department">
-          <option *ngFor="let dept of department" [value]="model.department">{{dept.name}}</option>
+        <select
+          class="form-control"
+          name="department"
+          [(ngModel)]="model.department"
+        >
+          <option *ngFor="let dept of department" [value]="model.department">
+            {{ dept.name }}
+          </option>
         </select>
-      </div><br/>
-      <button class="btn btn-success" (click)="createFaculty()">Create</button>&nbsp;
+      </div>
+      <br />
+      <button class="btn btn-success" (click)="createStaff()">Create</button
+      >&nbsp;
       <button class="btn btn-warning" routerLink="/admin">Back</button>
     </form>
   </div>

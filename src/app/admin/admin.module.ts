@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AddCourseComponent } from './components/add-course/add-course.component';
-import { AddBranchComponent } from './components/add-branch/add-branch.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewStaffComponent } from './components/view-staff/view-staff.component';
@@ -16,7 +15,6 @@ import { ViewDepartmentComponent } from './components/view-department/view-depar
 @NgModule({
   declarations: [
     AddCourseComponent,
-    AddBranchComponent,
     AddStaffComponent,
     HomeComponent,
     ViewStaffComponent,

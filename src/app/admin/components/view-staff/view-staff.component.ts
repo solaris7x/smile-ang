@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Staff } from '../../models/Staff';
 import { HttpClientService } from '../../services/http-client.service';
+import { StaffService } from '../../services/staff.service';
 
 @Component({
   selector: 'app-view-staff',
@@ -10,13 +11,10 @@ import { HttpClientService } from '../../services/http-client.service';
 export class ViewStaffComponent implements OnInit {
   staff: Staff[] = [];
 
-  constructor(private httpService: HttpClientService) {}
+  constructor(private staffService: StaffService) {}
 
   ngOnInit(): void {
-    this.getStaff();
-  }
-  private getStaff() {
-    this.httpService.getStaff().subscribe((data) => {
+    this.staffService.getStaff().subscribe((data) => {
       this.staff = data;
     });
   }
