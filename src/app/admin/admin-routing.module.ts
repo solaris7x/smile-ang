@@ -1,13 +1,14 @@
-import { ViewStaffComponent } from './view-staff/view-staff.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { AddCourseComponent } from './add-course/add-course.component';
-import { AddDepartmentComponent } from './add-department/add-department.component';
-import { AddStaffComponent } from './add-staff/add-staff.component';
-import { HomeComponent } from './home/home.component';
-import { ViewCourseComponent } from './view-course/view-course.component';
-import { ViewDepartmentComponent } from './view-department/view-department.component';
+
+import { AddCourseComponent } from './components/add-course/add-course.component';
+import { AddDepartmentComponent } from './components/add-department/add-department.component';
+import { AddStaffComponent } from './components/add-staff/add-staff.component';
+import { HomeComponent } from './components/home/home.component';
+import { ViewCourseComponent } from './components/view-course/view-course.component';
+import { ViewDepartmentComponent } from './components/view-department/view-department.component';
+import { ViewStaffComponent } from './components/view-staff/view-staff.component';
 
 export const adminRoutes: Routes = [
   /* {

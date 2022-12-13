@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminRoutingModule } from './admin-routing.module';
-import { AddCourseComponent } from './add-course/add-course.component';
 import { FormsModule } from '@angular/forms';
-import { AddBranchComponent } from './add-branch/add-branch.component';
-import { AddStaffComponent } from './add-staff/add-staff.component';
-import { HomeComponent } from './home/home.component';
-import { ViewStaffComponent } from './view-staff/view-staff.component';
-import { ViewCourseComponent } from './view-course/view-course.component';
-
-import { AddDepartmentComponent } from './add-department/add-department.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ViewDepartmentComponent } from './view-department/view-department.component';
+
+import { AdminRoutingModule } from './admin-routing.module';
+import { AddCourseComponent } from './components/add-course/add-course.component';
+import { AddBranchComponent } from './components/add-branch/add-branch.component';
+import { AddStaffComponent } from './components/add-staff/add-staff.component';
+import { HomeComponent } from './components/home/home.component';
+import { ViewStaffComponent } from './components/view-staff/view-staff.component';
+import { ViewCourseComponent } from './components/view-course/view-course.component';
+import { AddDepartmentComponent } from './components/add-department/add-department.component';
+import { ViewDepartmentComponent } from './components/view-department/view-department.component';
 
 @NgModule({
   declarations: [

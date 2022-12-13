@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DepartmentType } from '../models/department';
-import { DepartmentService } from '../services/department.service';
+import { DepartmentType } from '../../models/department';
+import { DepartmentService } from '../../services/department.service';
 
 @Component({
   selector: 'app-add-department',
