@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { Course, HttpClientService } from 'src/app/admin/http-client.service';
+import { CourseType } from 'src/app/admin/course';
+import { CourseService } from 'src/app/admin/course.service';
+
 @Component({
   selector: 'app-add-course',
   templateUrl: './add-course.component.html',
-  styleUrls: ['./add-course.component.css']
+  styleUrls: ['./add-course.component.css'],
 })
 export class AddCourseComponent implements OnInit {
+  constructor(private courseService: CourseService) {}
 
-  constructor(private httpClient:HttpClientService) {
-   }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
+  model: CourseType = {
+    name: '',
+    id: '',
+  };
 
-  model = new Course("");
-
-  createCourses(){
-    this.httpClient.createCourses(this.model).subscribe(data =>
-      {
-        console.log("Course added successfully")
-        console.log(data)
-      })
-    console.log(this.model)
+  createCourses() {
+    // console.log('createCourse', this.model);
+    const res = this.courseService.addCourse(this.model);
+    res.subscribe((data) => console.log(data));
   }
 }

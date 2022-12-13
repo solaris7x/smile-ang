@@ -1,14 +1,37 @@
 <div class="container w-50">
     <div class="card my-4 p-4 shadow bg-body">
-            <h4 class="text-center">Add Courses</h4>
-            <form class="" (ngSubmit)="createCourses()">
-                <div class="form-group">
-                    <label for="name">Course Name</label>
-                    <input [(ngModel)]="model.courseName" name="courseName" placeholder="CourseName" type="text" class="form-control" id="courseName">
-                </div><br/>
-                
-                <button class="btn btn-success" (click)="createCourses()">Create</button>&nbsp;
-                <button class="btn btn-warning" routerLink="/admin">Back</button>
-            </form>
+      <h4 class="text-center">Add Course</h4>
+      <form>
+        <div class="form-group">
+          <!-- Course Name -->
+          <label for="name">Course Name</label>
+          <input
+            placeholder="Course Name"
+            [(ngModel)]="model.name"
+            name="courseName"
+            type="text"
+            class="form-control"
+            id="courseName"
+          />
+        </div>
+        <!-- Course Code -->
+        <div class="form-group">
+          <label for="code">Course ID</label>
+          <input
+            placeholder="Course Id"
+            [(ngModel)]="model.id"
+            name="courseId"
+            type="text"
+            class="form-control"
+            id="courseId"
+          />
+        </div>
+        <br />
+  
+        <button class="btn btn-success" (click)="createCourses()">
+          Create</button
+        >&nbsp;
+        <button class="btn btn-warning" routerLink="/admin">Back</button>
+      </form>
     </div>
-</div>
+  </div>

@@ -16,7 +16,6 @@ import { ViewStaffComponent } from './view-staff/view-staff.component';
     AddBranchComponent,
     AddStaffComponent,
     HomeComponent,
-    ViewStaffComponent
   ],
   imports: [
     CommonModule,
