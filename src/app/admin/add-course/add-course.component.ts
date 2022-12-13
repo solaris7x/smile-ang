@@ -14,7 +14,7 @@ export class AddCourseComponent implements OnInit {
 
   model: CourseType = {
     name: '',
-    id: '',
+    // id: '',
   };
 
   createCourses() {
