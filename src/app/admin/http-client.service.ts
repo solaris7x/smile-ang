@@ -28,18 +28,16 @@ export class HttpClientService {
 
   getFaculty():Observable<Faculty[]>{
     console.log("test call");
-    const data = this.httpClient.get<Faculty[]>(this.baseUrl + "/admin/staff")
-    console.log("Get staff worked ")
-    return data 
+    return this.httpClient.get<Faculty[]>(`${this.baseUrl}`);
   }
 
-  public deleteFaculty(faculty: Faculty): Observable<any> {
-    return this.httpClient.delete<Faculty>(this.baseUrl + "/"+ faculty.firstName);
+  public deleteFaculty(faculty: Faculty) {
+    return this.httpClient.delete<Faculty>(`${this.baseUrl}` + "/"+ `${faculty.firstName}`);
   }
 
-  createFaculty(faculty: Faculty): Observable<any>{
+  public createFaculty(faculty: Faculty):Observable<Object>{
     console.log(faculty)
-    return this.httpClient.post(this.baseUrl , faculty);
+    return this.httpClient.post(`${this.baseUrl}`, faculty);
   }
 
   getBranch(){
@@ -52,7 +50,7 @@ export class HttpClientService {
   } 
 
   public createBranches(branch:Branch){
-    return this.httpClient.post<Branch>("http://localhost:3030/addBranch", branch);
+    return this.httpClient.post("http://localhost:3030/addBranch", branch);
   }
 
   getCourse(){
@@ -65,7 +63,7 @@ export class HttpClientService {
   } 
 
   public createCourses(course:Course){
-    return this.httpClient.post<Course>("http://localhost:3030/addCourse", course);
+    return this.httpClient.post("http://localhost:3030/addCourse", course);
   }
 
 }

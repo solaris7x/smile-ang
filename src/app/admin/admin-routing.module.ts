@@ -1,3 +1,4 @@
+import { ViewStaffComponent } from './view-staff/view-staff.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -22,6 +23,10 @@ export const adminRoutes: Routes = [
   {
     path:'add-branch',
     component:AddBranchComponent
+  },
+  {
+    path:'view-staff',
+    component:ViewStaffComponent
   },
   {
     path:'add-staff',
