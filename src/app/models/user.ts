@@ -12,10 +12,10 @@ export interface Student extends UserType {
   subjects: string[];
 }
 
-export interface Faculty extends UserType {
-  department: string;
-  /*subjects: string[];*/
-}
+// export interface Faculty extends UserType {
+//   department: string;
+//   subjects: string[];
+// }
 
 export class User {
   constructor(
@@ -42,7 +42,7 @@ export class Student implements Student {
   ) {}
 }
 
-export class Faculty implements Faculty {
+/* export class Faculty implements Faculty {
   constructor(
     public id: string,
     public firstName:string,
@@ -54,7 +54,7 @@ export class Faculty implements Faculty {
     public qualification:string,
     public designation:string,
     public password: string,
-    /* public subjects: string[], */
+    public subjects: string[],
     public dob?: string
   ) {}
-}
+} */

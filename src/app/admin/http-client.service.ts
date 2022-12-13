@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Faculty } from 'src/app/models/user';
+import { Faculty } from 'src/app/admin/Faculty';
+import { Observable, of } from 'rxjs';
 
 export class Branch{
   constructor(
@@ -14,36 +15,40 @@ export class Course{
   ){}
 }
 
-const baseUrl='http://localhost:3030/api/';
-/* const baseUrl1='http://localhost:7878/api/add-branch';
-const baseUrl2='http://localhost:7878/api/add-course'; */
+
+/* const baseUrl1='http://localhost:8081/api/add-branch';
+const baseUrl2='http://localhost:8081/api/add-course'; */
 @Injectable({
   providedIn: 'root'
 })
 export class HttpClientService {
+  private baseUrl='http://localhost:8081/admin/staff';
 
   constructor(private httpClient:HttpClient) { }
 
-  getFaculty(){
+  getFaculty():Observable<Faculty[]>{
     console.log("test call");
-    return this.httpClient.get<Faculty[]>(baseUrl)
+    const data = this.httpClient.get<Faculty[]>(this.baseUrl + "/admin/staff")
+    console.log("Get staff worked ")
+    return data 
   }
 
-  public deleteFaculty(faculty: Faculty) {
-    return this.httpClient.delete<Faculty>(baseUrl + "/"+ faculty.firstName);
+  public deleteFaculty(faculty: Faculty): Observable<any> {
+    return this.httpClient.delete<Faculty>(this.baseUrl + "/"+ faculty.firstName);
   }
 
-  public createFaculty(faculty: Faculty){
-    return this.httpClient.post<Faculty>(baseUrl, faculty);
+  createFaculty(faculty: Faculty): Observable<any>{
+    console.log(faculty)
+    return this.httpClient.post(this.baseUrl , faculty);
   }
 
   getBranch(){
     console.log("test call");
-    return this.httpClient.get<Branch[]>('http://localhost:3030/Brancs')
+    return this.httpClient.get<Branch[]>(this.baseUrl+'/admin/branch')
   }
 
   public deleteBranch(branch: Branch) {
-    return this.httpClient.delete<Branch>("http://localhost:3030" + "/"+ branch.branchName);
+    return this.httpClient.delete<Branch>(this.baseUrl + "/"+ branch.branchName);
   } 
 
   public createBranches(branch:Branch){
@@ -52,11 +57,11 @@ export class HttpClientService {
 
   getCourse(){
     console.log("test call");
-    return this.httpClient.get<Course[]>('http://localhost:3030/Cours')
+    return this.httpClient.get<Course[]>(this.baseUrl+'/admin/course')
   }
 
   public deleteCourse(course: Course) {
-    return this.httpClient.delete<Course>("http://localhost:3030" + "/"+ course.courseName);
+    return this.httpClient.delete<Course>(this.baseUrl + "/"+ course.courseName);
   } 
 
   public createCourses(course:Course){

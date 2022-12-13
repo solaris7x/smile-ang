@@ -2,11 +2,11 @@
   <div class="card my-4 p-4 shadow bg-body">
     <h2 class="text-center">Add faculty</h2>
     <form>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="id">ID:</label>
         <input [(ngModel)]="model.id" placeholder="ID" name="id" type="number" class="form-control" id="id">
       </div>
-      <br />
+      <br /> -->
       <div class="form-group">
         <label for="name">FirstName:</label>
         <input [(ngModel)]="model.firstName" placeholder="FirstName" type="text" name="firstName" class="form-control"
@@ -38,8 +38,8 @@
       </div>
       <br />
       <div class="form-group">
-        <label for="phno">Ph.No:</label>
-        <input [(ngModel)]="model.phno" placeholder="Ph.No" type="text" name="phno" class="form-control" id="ph.No">
+        <label for="phone">Ph.No:</label>
+        <input [(ngModel)]="model.phone" placeholder="Ph.No" type="text" name="phone" class="form-control" id="phone">
       </div>
       <br />
       <div class="form-group">
@@ -72,7 +72,7 @@
       <br />
       <!--course=(B.tech,M.Tech..) and branch=(ece,cse,it...) -->
       <div class="from-group">
-        <label>Course:</label>
+        <label>Department:</label>
         <select class="form-control" name="department" [(ngModel)]="model.department">
           <option *ngFor="let dept of department" [value]="model.department">{{dept.name}}</option>
         </select>
