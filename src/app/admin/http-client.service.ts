@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Faculty } from 'src/app/admin/Faculty';
 import { Observable, of } from 'rxjs';
+import { CourseType } from './course';
+
 
 export class Branch{
   constructor(
@@ -22,7 +24,7 @@ const baseUrl2='http://localhost:8081/api/add-course'; */
   providedIn: 'root'
 })
 export class HttpClientService {
-  private baseUrl='http://localhost:8081/admin/staff';
+  private baseUrl='http://localhost:8081';
 
   constructor(private httpClient:HttpClient) { }
 
@@ -53,9 +55,9 @@ export class HttpClientService {
     return this.httpClient.post("http://localhost:3030/addBranch", branch);
   }
 
-  getCourse(){
+  getCourse():Observable<CourseType[]>{
     console.log("test call");
-    return this.httpClient.get<Course[]>(this.baseUrl+'/admin/course')
+    return this.httpClient.get<CourseType[]>(this.baseUrl+'/admin/course');
   }
 
   public deleteCourse(course: Course) {
@@ -63,7 +65,7 @@ export class HttpClientService {
   } 
 
   public createCourses(course:Course){
-    return this.httpClient.post("http://localhost:3030/addCourse", course);
+    return this.httpClient.post(this.baseUrl, course);
   }
 
 }

@@ -8,6 +8,7 @@ import { AddStaffComponent } from './add-staff/add-staff.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewStaffComponent } from './view-staff/view-staff.component';
+import { ViewCourseComponent } from './view-course/view-course.component';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import { ViewStaffComponent } from './view-staff/view-staff.component';
     AddBranchComponent,
     AddStaffComponent,
     HomeComponent,
+    ViewStaffComponent,
+    ViewCourseComponent
   ],
   imports: [
     CommonModule,
