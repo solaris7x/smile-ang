@@ -14,6 +14,7 @@ import { AdminModule } from './admin/admin.module';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { StudentModule } from './student/student.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StaffModule } from './staff/staff.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     AdminModule,
+    StaffModule,
     StudentModule,
     AppRoutingModule,
   ],
