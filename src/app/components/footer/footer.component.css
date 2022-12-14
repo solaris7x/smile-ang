@@ -1,0 +1,14 @@
+.footer-custom {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: rgb(153, 188, 228);
+}
+.h4{
+    text-align: left;
+}
