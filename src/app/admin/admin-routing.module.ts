@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ViewCourseComponent } from './components/view-course/view-course.component';
 import { ViewDepartmentComponent } from './components/view-department/view-department.component';
 import { ViewStaffComponent } from './components/view-staff/view-staff.component';
+import { ViewStudentComponent } from './components/view-student/view-student.component';
 
 export const adminRoutes: Routes = [
   {
@@ -40,8 +41,8 @@ export const adminRoutes: Routes = [
         component: ViewDepartmentComponent,
       },
       {
-        path: 'add-staff',
-        component: AddStaffComponent,
+        path: 'view-student',
+        component: ViewStudentComponent,
       },
     ],
   },
