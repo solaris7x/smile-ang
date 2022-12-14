@@ -20,6 +20,7 @@ body {
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color:rgba(172, 94, 94, 0.2) ;
     margin: 8px;
   }
   
