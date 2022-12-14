@@ -37,10 +37,10 @@ const routes: Routes = [
   //   path: 'admin',
   //   children: [...adminRoutes]
   //  },
-  {
-    path: 'student',
-    children: [...studentRoutes],
-  },
+  // {
+  //   path: 'student',
+  //   children: [...studentRoutes],
+  // },
   // 404 Page
   {
     path: '**',

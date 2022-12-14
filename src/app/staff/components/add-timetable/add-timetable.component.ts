@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Timetable } from '../../models/timetable';
+import { Timetable } from '../../../models/timetable';
 import { TimetableService } from '../../services/timetable.service';
 
 @Component({

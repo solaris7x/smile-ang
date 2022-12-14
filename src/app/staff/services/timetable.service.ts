@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Timetable } from '../models/timetable';
+import { Timetable } from '../../models/timetable';
 
 @Injectable({
   providedIn: 'root',

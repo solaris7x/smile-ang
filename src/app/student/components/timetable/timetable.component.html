@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Course timetable</h2>
+  <!-- View timetable table -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Course</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let timetable of timetables">
+        <td>{{ timetable.name }}</td>
+        <td>{{ timetable.date }}</td>
+        <td>{{ timetable.time }}</td>
+        <td>{{ timetable.course }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- If error -->
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
+</div>
