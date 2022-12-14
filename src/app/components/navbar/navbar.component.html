@@ -1,25 +1,17 @@
 <nav>
   <ul class="navbar-custom">
     <li style="margin-right: auto; color: azure; font-size: 2rem">
-      Smile University
+      <a routerLink="/"> Smile University </a>
     </li>
-    <!-- Search box -->
-    <li>
-      <form class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </li>
-    <li><a routerLink="/">Home</a></li>&nbsp;
-    <li><a routerLink="/contactUs">Contact</a></li>&nbsp;
-    <li><a routerLink="/aboutus">About Us</a></li>&nbsp;
+    <li><a routerLink="/">Home</a></li>
+    &nbsp;
+    <li><a routerLink="/contactUs">Contact Us</a></li>
+    &nbsp;
+    <li><a routerLink="/aboutus">About Us</a></li>
+    &nbsp;
     <div class="d-flex gap-2" *ngIf="!loggedIn; else notLoggedIn">
-      <li><a routerLink="/login">Login</a></li>&nbsp;
+      <li><a routerLink="/login">Login</a></li>
+      &nbsp;
       <li><a routerLink="/register">Register</a></li>
     </div>
     <ng-template #notLoggedIn>

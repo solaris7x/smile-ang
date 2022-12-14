@@ -1,24 +1,35 @@
 <div class="container">
-  <h2>Course timetable</h2>
-  <!-- View timetable table -->
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Date</th>
-        <th scope="col">Time</th>
-        <th scope="col">Course</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let timetable of timetables">
-        <td>{{ timetable.name }}</td>
-        <td>{{ timetable.date }}</td>
-        <td>{{ timetable.time }}</td>
-        <td>{{ timetable.course }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h2 class="py-2">Course timetable</h2>
+  <!-- Course Name input -->
+  <div class="card p-2">
+    <input
+      class="form-control"
+      style="max-width: 20vh"
+      type="text"
+      placeholder="Course Name"
+      [(ngModel)]="courseName"
+      onchange="this.getTimetables"
+    />
+    <!-- View timetable table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let timetable of timetables">
+          <td>{{ timetable.name }}</td>
+          <td>{{ timetable.date }}</td>
+          <td>{{ timetable.time }}</td>
+          <td>{{ timetable.course }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- If error -->
   <div *ngIf="errorMessage" class="alert alert-danger" role="alert">

@@ -1,57 +1,61 @@
 <div class="Contact-us">
-<div style="padding: 1rem">
-  <h2 class="text-center">Contact US</h2>
-  <div class="card p-2">
-    <h3>Address</h3>
-    <p>160 Convent Ave, New York, NY 10031</p>
-    <h3>Phone</h3>
-    <p>+1 234-567-8900</p>
-    <h3>Email</h3>
-    <p>support@nyc.uni.edu</p>
-  </div>
-  <h3 class="my-3 text-center">Send your query</h3>
-  <!-- Contact form -->
-  <div class="mb-3 d-flex justify-content-center">
-    <form
-      class="card p-3"
-      style="width: 50%"
-      (ngSubmit)="onSubmit()"
-      #form="ngForm"
-    >
-      <div class="form_group">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          [(ngModel)]="model.email"
-          name="email"
-          required
-          #email="ngModel"
-        />
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </div>
+  <div class="" style="max-width: 60%; margin-left: auto; margin-right: auto">
+    <div style="padding: 1rem">
+      <h2 class="text-center">Contact US</h2>
+      <div class="card p-2">
+        <h3>Address</h3>
+        <p>160 Convent Ave, New York, NY 10031</p>
+        <h3>Phone</h3>
+        <p>+1 234-567-8900</p>
+        <h3>Email</h3>
+        <p>support@nyc.uni.edu</p>
       </div>
-      <!-- Message -->
-      <div class="form_group">
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Message</label
-          >
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            name="message"
-            [(ngModel)]="model.message"
-            #message="ngModel"
-          ></textarea>
-        </div>
+      <h3 class="my-3 text-center">Send your query</h3>
+      <!-- Contact form -->
+      <div class="mb-3 d-flex justify-content-center">
+        <form
+          class="card p-3"
+          style="width: 80%"
+          (ngSubmit)="onSubmit()"
+          #form="ngForm"
+        >
+          <div class="form_group">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              [(ngModel)]="model.email"
+              name="email"
+              required
+              #email="ngModel"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <!-- Message -->
+          <div class="form_group">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Message</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                name="message"
+                [(ngModel)]="model.message"
+                #message="ngModel"
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
   </div>
-</div>
 </div>

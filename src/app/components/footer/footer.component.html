@@ -1,7 +1,11 @@
-<div class="w-full bg-white text-white px-5 mt-3 py-3">
-  <div class="footer-custom">
-    <h4 class="">Smile University</h4>
-    <h5 style="text-align: left;">Date : {{dateToday | date:'short'}} </h5>
+<div class="footer-custom">
+  <div class="w-full text-white px-5 mt-3 py-3">
+    <h4 class="">
+      <a routerLink="/" style="text-decoration: none; color: white">
+        Smile University
+      </a>
+    </h4>
+    <h5 style="text-align: left">Date : {{ dateToday | date : "short" }}</h5>
+    <div class="py-2"></div>
   </div>
 </div>
-

@@ -1,4 +1,11 @@
-<div class="">
+<div
+  class=""
+  style="
+    background-image: url(/assets/images/adminbg.jpg);
+    background-size: cover;
+    min-height: 80vh;
+  "
+>
   <!-- Navbar -->
   <nav
     class="navbar navbar-expand-lg navbar-dark"
@@ -7,7 +14,7 @@
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Navbar brand -->
-      <a class="navbar-brand" routerLink="">Admin</a>
+      <a class="navbar-brand" routerLink="/admin">Admin</a>
 
       <!-- Toggle button -->
       <button
@@ -28,17 +35,17 @@
           <!-- Link -->
           <li class="nav-item">
             <a class="nav-link" routerLink="./add-staff" name="child1"
-              >Add New Faculty</a
+              >Add Staff</a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="./view-staff" name="child1"
-              >View Faculty List</a
+              >View Staff</a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="./add-course" name="child2"
-              >Add New Course</a
+              >Add Course</a
             >
           </li>
           <li class="nav-item">
@@ -51,7 +58,7 @@
               class="nav-link"
               routerLink="./add-department"
               name="add-department"
-              >Add New Department</a
+              >Add Department</a
             >
           </li>
           <li class="nav-item">
@@ -100,5 +107,9 @@
         <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
     </div>
 </nav> -->
-  <router-outlet></router-outlet>
+  <div class="container py-4">
+    <div class="p-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

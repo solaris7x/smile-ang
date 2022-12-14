@@ -21,5 +21,9 @@ export class ViewStudentComponent implements OnInit {
 
   deleteStudent(studentId: number) {
     console.log(studentId);
+    this.studentService.deleteStudent(studentId).subscribe((data) => {
+      console.log(data);
+      this.ngOnInit();
+    });
   }
 }

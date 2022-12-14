@@ -11,8 +11,19 @@ export class TimetableComponent implements OnInit {
   constructor(private timetableService: TimetableService) {}
 
   ngOnInit(): void {
+    this.getTimetables();
+  }
+
+  timetables: Timetable[] = [];
+
+  courseName: string = 'PPE';
+
+  errorMessage: string | null = null;
+
+  getTimetables() {
     // FIXME: Course hardcoded
-    this.timetableService.getTimetables('PPE').subscribe(
+    console.log(this.courseName);
+    this.timetableService.getTimetables(this.courseName).subscribe(
       (data) => {
         console.log(data);
         this.timetables = data;
@@ -20,8 +31,4 @@ export class TimetableComponent implements OnInit {
       (error) => (this.errorMessage = error.message)
     );
   }
-
-  timetables: Timetable[] = [];
-
-  errorMessage: string | null = null;
 }
