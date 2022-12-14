@@ -9,7 +9,7 @@ export class TimetableService {
   constructor(private http: HttpClient) {}
 
   getTimetable() {
-    return this.http.get<Timetable>('http://localhost:8081/admin/timetable');
+    return this.http.get<Timetable[]>('http://localhost:8081/admin/timetable');
   }
 
   addTimetable(timetable: Timetable) {
@@ -17,5 +17,9 @@ export class TimetableService {
       'http://localhost:8081/admin/timetable',
       timetable
     );
+  }
+
+  deleteTimetable(id: number) {
+    return this.http.delete(`http://localhost:8081/admin/timetable/${id}`);
   }
 }

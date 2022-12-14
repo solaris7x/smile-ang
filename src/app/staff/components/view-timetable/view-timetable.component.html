@@ -1,1 +1,30 @@
-<p>view-timetable works!</p>
+<div class="container">
+  <!-- View timetable table -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Course</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let timetable of timetables">
+        <td>{{ timetable.name }}</td>
+        <td>{{ timetable.date }}</td>
+        <td>{{ timetable.time }}</td>
+        <td>{{ timetable.course }}</td>
+        <td>
+          <button
+            class="btn btn-danger btn-sm"
+            (click)="deleteTimetable(timetable.id || 0)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

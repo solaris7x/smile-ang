@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TimetableService } from '../../services/timetable.service';
 import { Timetable } from '../../models/timetable';
+import { TimetableService } from '../../services/timetable.service';
 
 @Component({
   selector: 'app-add-timetable',
