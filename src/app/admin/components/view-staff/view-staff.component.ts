@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Staff } from '../../models/Staff';
-import { HttpClientService } from '../../services/http-client.service';
+import { StaffType } from '../../models/Staff';
 import { StaffService } from '../../services/staff.service';
 
 @Component({
@@ -9,7 +8,7 @@ import { StaffService } from '../../services/staff.service';
   styleUrls: ['./view-staff.component.css'],
 })
 export class ViewStaffComponent implements OnInit {
-  staff: Staff[] = [];
+  staff: StaffType[] = [];
 
   constructor(private staffService: StaffService) {}
 

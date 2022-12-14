@@ -1,38 +1,37 @@
 <div class="col-md-9 offset-md-1">
-    <h3>Faculty List</h3><br>
-   <table class="table table-stripped">
-       <thead>
-           <tr>
-               <th>Id</th>
-               <th>First Name</th>
-               <th>Last Name</th>
-               <th>Gender</th>
-               <th>Email</th>
-               <th>Pho.no</th>
-               <th>Experiance</th>
-               <th>Qualification</th>
-               <th>Designsation</th>
-               <th>Department</th>
-               <th>DOB</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr *ngFor=" let s of staff">
-               <td>{{s.id}}</td>
-               <td>{{s.firstName}}</td>
-               <td>{{s.lastName}}</td>
-               <td>{{s.gender}}</td>
-               <td>{{s.email}}</td>
-               <td>{{s.phone}}</td>
-               <td>{{s.experiance}}</td>
-               <td>{{s.qualification}}</td>
-               <td>{{s.designation}}</td>
-               <td>{{s.dob}}</td>
-           </tr>
-       </tbody>
-   </table>
-   <button class="btn btn-warning" routerLink="/admin">Back</button>
-
+  <h3>Faculty List</h3>
+  <br />
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Pho.no</th>
+        <th>Experiance</th>
+        <th>Qualification</th>
+        <th>Designsation</th>
+        <!-- <th>Department</th> -->
+        <th>DOB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of staff">
+        <td>{{ s.id }}</td>
+        <td>{{ s.firstName }}</td>
+        <td>{{ s.lastName }}</td>
+        <td>{{ s.gender }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.phone }}</td>
+        <td>{{ s.experiance }}</td>
+        <td>{{ s.qualification }}</td>
+        <td>{{ s.designation }}</td>
+        <!-- <td>{{s.department}}</td> -->
+        <td>{{ s.dob }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-warning" routerLink="/admin">Back</button>
 </div>
-
-
