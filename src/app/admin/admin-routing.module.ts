@@ -39,10 +39,6 @@ export const adminRoutes: Routes = [
         path: 'view-department',
         component: ViewDepartmentComponent,
       },
-      {
-        path: 'add-staff',
-        component: AddStaffComponent,
-      },
     ],
   },
 ];
