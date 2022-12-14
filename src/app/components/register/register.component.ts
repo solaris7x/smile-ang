@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Student, User } from 'src/app/models/user';
+import { AuthService } from 'src/app/services/auth.service';
+import { Student } from 'src/app/student/models/student';
 
 @Component({
   selector: 'app-register',
@@ -7,31 +8,35 @@ import { Student, User } from 'src/app/models/user';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  model = new User('', '','', '', '', '');
-  // model = new Student('', '', '', '', '', '', ['Computer Science']);
+  constructor(private authService: AuthService) {}
 
-  submitted = false;
+  ngOnInit(): void {}
+
+  model: Student = {
+    email: '',
+    password: '',
+    firstName: '',
+    lastName: '',
+    gender: '',
+    phone: 0,
+    dob: '',
+  };
+
+  confirmPassword = '';
+
+  error: string | null = '';
+
+  success: string | null = '';
 
   onSubmit() {
-    console.log(this.model);
-    this.submitted = true;
+    // console.log(this.model);
+    this.authService.register(this.model).subscribe(
+      (data) => (this.success = `Student registered with ID ${data.id}`),
+      (err) => (this.error = err.message)
+    );
   }
 
   resetFormModel() {
-    this.model = new User('', '','', '', '', '');
     // this.model = new Student('', '', '', '', '', '', ['Computer Science']);
   }
-
-  /////// NOT SHOWN IN DOCS ///////
-
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(regisForm)}}
-  showFormControls(form: any) {
-    return form && form.controls['name'] && form.controls['name'].value; // Dr. IQ
-  }
-
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
