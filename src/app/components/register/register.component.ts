@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { Student } from 'src/app/student/models/student';
+import { StudentType } from 'src/app/student/models/Student';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  model: Student = {
+  model: StudentType = {
     email: '',
     password: '',
     firstName: '',

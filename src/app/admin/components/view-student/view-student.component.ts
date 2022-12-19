@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from 'src/app/student/models/student';
+import { StudentType } from 'src/app/student/models/Student';
 import { StudentService } from '../../services/student.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class ViewStudentComponent implements OnInit {
     });
   }
 
-  students: Student[] = [];
+  students: StudentType[] = [];
 
   deleteStudent(studentId: number) {
     console.log(studentId);

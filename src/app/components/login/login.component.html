@@ -76,6 +76,10 @@
           [disabled]="!loginForm.form.valid"
         />
       </form>
+      <!-- Show if error -->
+      <div *ngIf="errorMsg" class="alert alert-danger mt-4">
+        {{ errorMsg }}
+      </div>
     </div>
   </div>
 </div>
