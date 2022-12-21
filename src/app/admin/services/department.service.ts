@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DepartmentType } from '../models/department';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { DepartmentType } from '../models/department';
 export class DepartmentService {
   constructor(private http: HttpClient) {}
 
-  baseUrl = 'http://localhost:8081/admin/department';
+  baseUrl = environment.apiURL + '/admin/department';
 
   addDepartment(department: DepartmentType) {
     console.log('addDepartment', department);

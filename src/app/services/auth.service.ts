@@ -5,6 +5,7 @@ import { StudentType } from '../student/models/Student';
 import { StaffType } from '../admin/models/Staff';
 import { AdminType } from '../admin/models/AdminType';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 export interface loginModel {
   email: string;
@@ -22,12 +23,12 @@ export class AuthService {
 
   register = (data: StudentType) => {
     console.log(data);
-    return this.http.post<StudentType>('http://localhost:8081/register', data);
+    return this.http.post<StudentType>(environment.apiURL + '/register', data);
   };
 
   login = (creds: loginModel) => {
     console.log('Logged In');
-    return this.http.post('http://localhost:8081/login', creds);
+    return this.http.post(environment.apiURL + '/login', creds);
     // this.loggedIn = true;
   };
 
